@@ -28,6 +28,8 @@ const router = (
       </Route>
       {/* Register Route */}
       <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      
     </Routes>
   </BrowserRouter>
 );
