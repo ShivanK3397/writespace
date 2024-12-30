@@ -25,7 +25,7 @@ const router = (
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} /> {/* This is equivalent to path="/" */}
         <Route path="/post/:id" element={<Single />} />
-        <Route path="write" element={<Write />} />
+        <Route path="/write" element={<Write />} />
       </Route>
       {/* Register Route */}
       <Route path="/register" element={<Register />} />
