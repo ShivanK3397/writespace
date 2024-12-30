@@ -3,6 +3,7 @@ import Logo from "../images/writespacelogo.jpg"
 import Edit from "../images/edit.png"
 import Delete from "../images/delete.png"
 import { Link } from 'react-router';
+import Menu from '../components/Menu';
 const Single = () => {
   return (
     <div className='single'>
@@ -25,12 +26,12 @@ const Single = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit inventore quibusdam laborum! Assumenda incidunt repellendus quia hic enim alias, error rerum, nostrum ratione quaerat accusamus reiciendis delectus repudiandae deleniti
         </p>
       </div>
-      <div className="menu">m</div>
+      <Menu/>
     </div>
   )
 }
