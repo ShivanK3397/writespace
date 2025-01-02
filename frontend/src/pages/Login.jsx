@@ -1,17 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { useState } from 'react'
+import axios from 'axios'
+
 
 const Login = () => {
+  const [inputs,setInputs] =useState({
+    username:"",
+    password:""
+  })
 
+  const [err,setError] = useState(null)
+
+  const handleChange = e =>{
+    setInputs(prev=>({...prev,[e.target.name]:e.target.value}))
+  }
+
+  const navigate = useNavigate()
+
+  const handleSubmit = async e=>{
+    e.preventDefault()
+    try{
+     await axios.post("http://localhost:8800/api/auth/login",inputs)
+      navigate("/")
+    
+    }
+    catch(err){
+    setError(err.response.data)
+      
+    }
+
+  }
 
   return (
     <div className='auth'>
       <h1>Login</h1>
       <form >
-        <input type="text" placeholder='username' />
-        <input type="text" placeholder='password'/>
-        <p>This is an error !</p>
-        <button>Login</button>
+        <input type="text" placeholder='username' name = "username" onChange={handleChange} />
+        <input type="text" placeholder='password' name="password" onChange={handleChange}/>
+      {err && <p>{err.response.data}</p>}
+        <button onClick={handleSubmit}>Login</button>
         <span>Don't have an account? <Link to="/register">Register</Link></span>
       </form>
     </div>
