@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router'
 
 const Login = () => {
+
+
   return (
     <div className='auth'>
       <h1>Login</h1>
