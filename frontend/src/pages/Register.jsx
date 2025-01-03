@@ -27,7 +27,7 @@ const Register = () => {
     
     }
     catch(err){
-    setError(err.response.data)
+      setError(err.response.data)
       
     }
 

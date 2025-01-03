@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link,useNavigate } from 'react-router'
 import { useState } from 'react'
 import axios from 'axios'
+
 
 
 const Login = () => {
@@ -19,9 +20,13 @@ const Login = () => {
   const navigate = useNavigate()
 
   const handleSubmit = async e=>{
+    
     e.preventDefault()
     try{
-     await axios.post("http://localhost:8800/api/auth/login",inputs)
+     await axios.post("http://localhost:8800/api/auth/login",{
+      username: 'test',
+      password: 'test',
+  })
       navigate("/")
     
     }
@@ -37,8 +42,8 @@ const Login = () => {
       <h1>Login</h1>
       <form >
         <input type="text" placeholder='username' name = "username" onChange={handleChange} />
-        <input type="text" placeholder='password' name="password" onChange={handleChange}/>
-      {err && <p>{err.response.data}</p>}
+        <input type="password" placeholder='password' name="password" onChange={handleChange}/>
+      {err && <p>{err}</p>}
         <button onClick={handleSubmit}>Login</button>
         <span>Don't have an account? <Link to="/register">Register</Link></span>
       </form>
