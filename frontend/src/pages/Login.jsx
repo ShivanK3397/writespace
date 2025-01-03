@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link,useNavigate } from 'react-router'
 import { useState } from 'react'
 import axios from 'axios'
+import { AuthContext } from '../context/authContext'
 
 
 
@@ -19,14 +20,16 @@ const Login = () => {
 
   const navigate = useNavigate()
 
+  const{login} =useContext(AuthContext);
+
+  
+  
+
   const handleSubmit = async e=>{
     
     e.preventDefault()
     try{
-     await axios.post("http://localhost:8800/api/auth/login",{
-      username: 'test',
-      password: 'test',
-  })
+      await login(inputs)
       navigate("/")
     
     }
