@@ -21,7 +21,11 @@ const Single = () => {
     const fetchData = async()=>{
       try{
         const res = await axios.get(`http://localhost:8800/api/posts/${postId}`)
-        setPost(res)
+        setPost(res.data)
+        
+        
+        
+        
       }catch(err){
         console.log(err);
         
@@ -32,7 +36,9 @@ const Single = () => {
 
   const handleDelete = async()=>{
     try{
-     await axios.delete(`http://localhost:8800/api/posts/${postId}`)
+     await axios.delete(`http://localhost:8800/api/posts/${postId}`,{
+      withCredentials:true
+     })
       navigate("/")
     }catch(err){
       console.log(err);
