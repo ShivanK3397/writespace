@@ -18,6 +18,8 @@ app.use(cors({
     credentials: true, // Allow cookies to be sent and received
   }));
 
+  app.get("/",(req,res)=>{
+    res.json("Hello from backend")})
 
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
