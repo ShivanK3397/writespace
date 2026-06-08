@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Link, useLocation } from 'react-router';
 import axios from 'axios';
 
+//Home
 const Home = () => {
   const [posts,setPosts] = useState([])
 

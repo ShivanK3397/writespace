@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import axios from "axios"
 
-
+//Register
 const Register = () => {
   const [inputs,setInputs] =useState({
     username:"",
